@@ -121,11 +121,11 @@ function updateTargetFrame() {
     });
 }
 
-// Continuous animation loop using linear interpolation (lerp) for smooth motion
+// Continuous animation loop using linear interpolation (lerp) for smooth fast motion
 function animate() {
     const diff = targetFrame - currentFrame;
     if (Math.abs(diff) > 0.001) {
-        currentFrame += diff * 0.14;
+        currentFrame += diff * 0.35;
         drawFrame(currentFrame);
     } else if (currentFrame !== targetFrame) {
         currentFrame = targetFrame;
@@ -134,8 +134,8 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-// Smooth slow scroll function for navigation links
-function smoothScrollTo(targetPosition, duration = 1600) {
+// Fast smooth scroll function for navigation links
+function smoothScrollTo(targetPosition, duration = 450) {
     const startPosition = window.pageYOffset || document.documentElement.scrollTop;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     const finalTarget = Math.min(Math.max(0, targetPosition), maxScroll);
@@ -149,12 +149,10 @@ function smoothScrollTo(targetPosition, duration = 1600) {
         const timeElapsed = currentTime - startTime;
         const progress = Math.min(timeElapsed / duration, 1);
 
-        // Ease in out cubic for ultra-smooth slow movement
-        const easeInOutCubic = progress < 0.5
-            ? 4 * progress * progress * progress
-            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+        // Ease out quad for fast responsive movement
+        const easeOutQuad = 1 - (1 - progress) * (1 - progress);
 
-        window.scrollTo(0, startPosition + distance * easeInOutCubic);
+        window.scrollTo(0, startPosition + distance * easeOutQuad);
 
         if (timeElapsed < duration) {
             requestAnimationFrame(step);
@@ -186,7 +184,7 @@ function setupNavSmoothScroll() {
                 }
             }
 
-            smoothScrollTo(targetPosition, 1400);
+            smoothScrollTo(targetPosition, 450);
 
             if (history.pushState) {
                 history.pushState(null, null, targetId);
