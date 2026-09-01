@@ -29,23 +29,29 @@ function preloadImages() {
     }
 }
 
-// Handle window resizing with device pixel ratio scaling
+// Handle window resizing with device pixel ratio scaling and forced frame redraw
 function resizeCanvas() {
+    if (!canvas) return;
     const dpr = window.devicePixelRatio || 1;
     canvas.width = window.innerWidth * dpr;
     canvas.height = window.innerHeight * dpr;
-    drawFrame(currentFrame);
+    
+    // Reset cached drawn index so the cleared canvas buffer is immediately redrawn
+    lastDrawnIndex = -1;
+    updateTargetFrame();
+    drawFrame(currentFrame, true);
 }
 
 // Render canvas frame centered with cover aspect ratio
 let lastDrawnIndex = -1;
 
-function drawFrame(frameIndex) {
+function drawFrame(frameIndex, force = false) {
+    if (!canvas || !ctx) return;
     const index = Math.min(frameCount - 1, Math.max(0, Math.round(frameIndex)));
     const img = images[index];
 
     if (!img || !img.complete || img.naturalWidth === 0) return;
-    if (index === lastDrawnIndex && currentFrame === targetFrame) return;
+    if (!force && index === lastDrawnIndex && currentFrame === targetFrame) return;
 
     lastDrawnIndex = index;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -271,8 +277,33 @@ if (document.readyState === 'loading') {
     initApp();
 }
 
-// Event Listeners
-window.addEventListener('resize', resizeCanvas);
+// Event Listeners & Reactive Viewport Breakpoint Observer
+const mediaQueryMobile = window.matchMedia('(max-width: 767px)');
+const mediaQueryTablet = window.matchMedia('(min-width: 768px) and (max-width: 991px)');
+const mediaQueryDesktop = window.matchMedia('(min-width: 992px)');
+
+function handleViewportBreakpointChange() {
+    lastDrawnIndex = -1;
+    resizeCanvas();
+    updateTargetFrame();
+    if (images.length > 0) {
+        drawFrame(currentFrame, true);
+    }
+}
+
+if (mediaQueryMobile.addEventListener) {
+    mediaQueryMobile.addEventListener('change', handleViewportBreakpointChange);
+    mediaQueryTablet.addEventListener('change', handleViewportBreakpointChange);
+    mediaQueryDesktop.addEventListener('change', handleViewportBreakpointChange);
+} else if (mediaQueryMobile.addListener) {
+    mediaQueryMobile.addListener(handleViewportBreakpointChange);
+    mediaQueryTablet.addListener(handleViewportBreakpointChange);
+    mediaQueryDesktop.addListener(handleViewportBreakpointChange);
+}
+
+window.addEventListener('resize', () => {
+    resizeCanvas();
+}, { passive: true });
 window.addEventListener('scroll', updateTargetFrame, { passive: true });
 
 // Initialize sequence
