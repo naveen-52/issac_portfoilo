@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - Isaac Joshua A | Mechanical Engineering & IoT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=6.0">
+</head>
+<body class="projects-page">
+    <!-- Top Navigation Bar -->
+    <header class="top-navbar">
+        <div class="nav-container">
+            <a href="index.html#home" class="nav-brand">ISAAC JOSHUA A</a>
+            <nav class="nav-links">
+                <a href="index.html#home" class="nav-item">Home</a>
+                <a href="skills.html" class="nav-item">Skills</a>
+                <a href="projects.html" class="nav-item">Projects</a>
+                <a href="education.html" class="nav-item">Education</a>
+                <a href="certifications.html" class="nav-item active">Certifications</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="projects-page-wrapper">
+
+        <!-- SECTION 1: Top Title & Subtext Hero Section -->
+        <section class="projects-page-hero">
+            <div class="badge">
+                <span class="status-dot green"></span>
+                <span>VERIFIED PROFESSIONAL CREDENTIALS</span>
+            </div>
+            <h1 class="projects-page-title">
+                Certifications &amp; <br>
+                <span class="highlight-blue">Verified Skills</span>
+            </h1>
+            <p class="projects-page-subtext">
+                A curated repository of technical certifications, CAD design accreditations, IoT specializations, and programming credentials earned by Isaac Joshua A from world-leading engineering software providers and academic institutions.
+            </p>
+
+            <!-- Interactive Category Filter Bar -->
+            <div class="projects-filter-bar">
+                <button class="filter-btn active" data-filter="all">All Credentials</button>
+                <button class="filter-btn" data-filter="cad">Mechanical &amp; CAD</button>
+                <button class="filter-btn" data-filter="iot">IoT &amp; Embedded</button>
+                <button class="filter-btn" data-filter="code">Programming &amp; Math</button>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Comprehensive Certifications Showcase Grid -->
+        <section class="projects-grid-section">
+            <div class="projects-grid-container">
+
+                <!-- 1. Solidworks Design Associate -->
+                <div class="project-card-full" data-category="cad">
+                    <div class="project-card-body">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <span class="project-card-category-badge" style="position:static;">Certification</span>
+                        </div>
+                        <h3 class="project-card-title">Solidworks Design Associate</h3>
+                        <p style="color:#60a5fa; font-size:0.95rem; font-weight:700; margin-bottom:0.5rem;">Certified by Dassault Systèmes</p>
+                        <p class="project-card-desc">
+                            Certified Associate credential in 3D parametric part modeling, assembly construction, and engineering drawing standards in SolidWorks.
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">SolidWorks</span>
+                            <span class="project-tag">3D Modeling</span>
+                            <span class="project-tag">Dassault Systèmes</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn-card-details" onclick="openCertModal('sw_associate')">
+                                View Details &rarr;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Robotics Course -->
+                <div class="project-card-full" data-category="iot">
+                    <div class="project-card-body">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <span class="project-card-category-badge" style="position:static;">Course</span>
+                        </div>
+                        <h3 class="project-card-title">Robotics Course</h3>
+                        <p style="color:#60a5fa; font-size:0.95rem; font-weight:700; margin-bottom:0.5rem;">Infosys Springboard</p>
+                        <p class="project-card-desc">
+                            Technical course covering robotics mechanics, kinematics, sensor integration, actuator control, and industrial robotics principles.
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Robotics</span>
+                            <span class="project-tag">Kinematics</span>
+                            <span class="project-tag">Infosys Springboard</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn-card-details" onclick="openCertModal('robotics_infosys')">
+                                View Details &rarr;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Machine Learning Onramp -->
+                <div class="project-card-full" data-category="code">
+                    <div class="project-card-body">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <span class="project-card-category-badge" style="position:static;">Interactive Course</span>
+                        </div>
+                        <h3 class="project-card-title">Machine Learning Onramp</h3>
+                        <p style="color:#60a5fa; font-size:0.95rem; font-weight:700; margin-bottom:0.5rem;">MathWorks</p>
+                        <p class="project-card-desc">
+                            Practical introduction to machine learning data preprocessing, feature extraction, and classification models in MATLAB.
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">MATLAB</span>
+                            <span class="project-tag">MathWorks</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn-card-details" onclick="openCertModal('ml_mathworks')">
+                                View Details &rarr;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Employment Communication – A Lab Based Course -->
+                <div class="project-card-full" data-category="code">
+                    <div class="project-card-body">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <span class="project-card-category-badge" style="position:static;">NPTEL Course</span>
+                        </div>
+                        <h3 class="project-card-title">Employment Communication – A Lab Based Course</h3>
+                        <p style="color:#60a5fa; font-size:0.95rem; font-weight:700; margin-bottom:0.5rem;">NPTEL</p>
+                        <p class="project-card-desc">
+                            Lab-based course focused on professional workplace communication, technical report writing, presentation skills, and corporate collaboration.
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Communication</span>
+                            <span class="project-tag">NPTEL</span>
+                            <span class="project-tag">Soft Skills</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn-card-details" onclick="openCertModal('emp_comm')">
+                                View Details &rarr;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Introduction to Machine Learning -->
+                <div class="project-card-full" data-category="code">
+                    <div class="project-card-body">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <span class="project-card-category-badge" style="position:static;">NPTEL Course</span>
+                        </div>
+                        <h3 class="project-card-title">Introduction to Machine Learning</h3>
+                        <p style="color:#60a5fa; font-size:0.95rem; font-weight:700; margin-bottom:0.5rem;">NPTEL</p>
+                        <p class="project-card-desc">
+                            Comprehensive foundational course covering supervised &amp; unsupervised learning algorithms, regression analysis, decision trees, and model evaluation.
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Algorithms</span>
+                            <span class="project-tag">NPTEL</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn-card-details" onclick="openCertModal('intro_ml')">
+                                View Details &rarr;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Mastering Fusion for CAD – 2 Days Bootcamp -->
+                <div class="project-card-full" data-category="cad">
+                    <div class="project-card-body">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <span class="project-card-category-badge" style="position:static;">2 Days Bootcamp</span>
+                        </div>
+                        <h3 class="project-card-title">Mastering Fusion for CAD – 2 Days Bootcamp</h3>
+                        <p style="color:#60a5fa; font-size:0.95rem; font-weight:700; margin-bottom:0.5rem;">Anna University &amp; Autodesk Student</p>
+                        <p class="project-card-desc">
+                            Intensive hands-on CAD bootcamp focusing on 3D parametric design, surface modeling, and cloud collaboration using Autodesk Fusion 360.
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Fusion 360</span>
+                            <span class="project-tag">Autodesk</span>
+                            <span class="project-tag">Anna University</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn-card-details" onclick="openCertModal('fusion_bootcamp')">
+                                View Details &rarr;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. 3rd National Workshop on “Innovative Applications of Industry 5.0” -->
+                <div id="workshops" class="project-card-full" data-category="iot">
+                    <div class="project-card-body">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
+                            <span class="project-card-category-badge" style="position:static;">National Workshop</span>
+                            <span class="project-card-category-badge" style="position:static; background:rgba(16,185,129,0.18); border:1px solid rgba(16,185,129,0.4); color:#10b981;">Duration: 1 Day</span>
+                        </div>
+                        <h3 class="project-card-title">3rd National Workshop on “Innovative Applications of Industry 5.0”</h3>
+                        <p style="color:#60a5fa; font-size:0.95rem; font-weight:700; margin-bottom:0.5rem;">Vellore Institute of Technology (VIT), Vellore</p>
+                        <p class="project-card-desc">
+                            National technical workshop on human-centric smart manufacturing, AI-assisted automation, IoT sensor integration, and Industry 5.0 paradigms.
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Industry 5.0</span>
+                            <span class="project-tag">IoT</span>
+                            <span class="project-tag">VIT Vellore</span>
+                            <span class="project-tag">1-Day Workshop</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn-card-details" onclick="openCertModal('industry_5')">
+                                View Details &rarr;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3: Key Competencies & Specialized Domains -->
+        <section class="projects-methodology-section">
+            <div class="projects-section-header">
+                <h2 class="projects-section-title">Verified Technical Competencies</h2>
+                <p class="projects-section-subtitle">
+                    Rigorous skill standards validated through accredited exams, hands-on evaluations, and software certifications.
+                </p>
+            </div>
+
+            <div class="methodology-grid">
+                <div class="methodology-card">
+                    <div class="methodology-step-num">01</div>
+                    <h3 class="methodology-card-title">Parametric 3D CAD &amp; Assemblies</h3>
+                    <p class="methodology-card-desc">
+                        Certified in Dassault Systèmes CSWA standards for building parametric 3D parts, complex mechanical assemblies, and engineering drawings.
+                    </p>
+                </div>
+
+                <div class="methodology-card">
+                    <div class="methodology-step-num">02</div>
+                    <h3 class="methodology-card-title">2D Technical Drafting &amp; GD&amp;T</h3>
+                    <p class="methodology-card-desc">
+                        Autodesk verified skills in geometric dimensioning, tolerancing, orthographic views, and precision drafting in AutoCAD.
+                    </p>
+                </div>
+
+                <div class="methodology-card">
+                    <div class="methodology-step-num">03</div>
+                    <h3 class="methodology-card-title">IoT Telemetry &amp; Embedded Firmware</h3>
+                    <p class="methodology-card-desc">
+                        Accredited knowledge in microcontroller programming, sensor calibration, wireless MQTT messaging, and cloud logging.
+                    </p>
+                </div>
+
+                <div class="methodology-card">
+                    <div class="methodology-step-num">04</div>
+                    <h3 class="methodology-card-title">Engineering Computing &amp; Math</h3>
+                    <p class="methodology-card-desc">
+                        Validated capability to develop Python automation scripts and MATLAB numerical models for mechanical system calculations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Issuing Organizations & Accreditation Partners -->
+        <section class="projects-tech-matrix-section">
+            <div class="projects-section-header">
+                <h2 class="projects-section-title">Accrediting Organizations</h2>
+                <p class="projects-section-subtitle">
+                    Credentials issued by globally recognized engineering platforms and technical institutions.
+                </p>
+            </div>
+
+            <div class="tech-matrix-grid">
+                <div class="tech-matrix-card">
+                    <div class="tech-matrix-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="tech-matrix-card-title">Dassault Systèmes</h3>
+                    <ul class="tech-matrix-list">
+                        <li class="tech-matrix-item">SolidWorks CSWA Mechanical Design</li>
+                        <li class="tech-matrix-item">3D Parametric Part &amp; Assembly Standards</li>
+                        <li class="tech-matrix-item">Global Credential ID Validation</li>
+                    </ul>
+                </div>
+
+                <div class="tech-matrix-card">
+                    <div class="tech-matrix-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v4"></path>
+                            <path d="M12 6L5 21"></path>
+                        </svg>
+                    </div>
+                    <h3 class="tech-matrix-card-title">Autodesk</h3>
+                    <ul class="tech-matrix-list">
+                        <li class="tech-matrix-item">AutoCAD Certified Professional</li>
+                        <li class="tech-matrix-item">Precision Mechanical 2D/3D Drafting</li>
+                        <li class="tech-matrix-item">GD&amp;T &amp; Orthographic Layouts</li>
+                    </ul>
+                </div>
+
+                <div class="tech-matrix-card">
+                    <div class="tech-matrix-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3v18h18"></path>
+                        </svg>
+                    </div>
+                    <h3 class="tech-matrix-card-title">MathWorks</h3>
+                    <ul class="tech-matrix-list">
+                        <li class="tech-matrix-item">MATLAB Computational Fundamentals</li>
+                        <li class="tech-matrix-item">Control Systems Loop Analysis</li>
+                        <li class="tech-matrix-item">Numerical Data Plotting</li>
+                    </ul>
+                </div>
+
+                <div class="tech-matrix-card">
+                    <div class="tech-matrix-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="tech-matrix-card-title">NPTEL &amp; Coursera</h3>
+                    <ul class="tech-matrix-list">
+                        <li class="tech-matrix-item">IoT &amp; Embedded Hardware Specialization</li>
+                        <li class="tech-matrix-item">Industrial Quality &amp; DFM Standards</li>
+                        <li class="tech-matrix-item">University Level Engineering Rigor</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Page Footer -->
+    <footer class="projects-page-footer">
+        <div class="footer-brand">ISAAC JOSHUA A</div>
+        <p class="footer-tagline">Mechanical Engineering Student &bull; IoT &amp; Technology Innovator</p>
+        <div class="footer-links">
+            <a href="index.html#home" class="footer-link">Home</a>
+            <a href="index.html#about" class="footer-link">About</a>
+            <a href="index.html#skills" class="footer-link">Skills</a>
+            <a href="projects.html" class="footer-link">Projects</a>
+            <a href="certifications.html" class="footer-link">Certifications</a>
+            <a href="index.html#contact" class="footer-link">Contact</a>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2026 Isaac Joshua A. All rights reserved. Designed with precision &amp; passion.
+        </div>
+    </footer>
+
+    <!-- Interactive Certification Modal Popup -->
+    <div id="project-modal" class="project-modal">
+        <div class="project-modal-content">
+            <button class="modal-close-btn" onclick="closeCertModal()">&times;</button>
+            <div id="modal-body-content"></div>
+        </div>
+    </div>
+
+    <!-- Script for Certifications Interactivity -->
+    <script>
+        // Category Filter Interactivity
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card-full');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Certification Modal Interactivity
+        const certDetails = {
+            'sw_associate': {
+                title: 'Solidworks Design Associate',
+                issuer: 'Certified by Dassault Systèmes',
+                date: 'Certified',
+                id: 'DS-SW-ASSOC',
+                category: 'CAD Certification',
+                description: 'Certified Associate credential in 3D parametric part modeling, assembly construction, mass properties analysis, and engineering drawing standards in SolidWorks.',
+                skills: [
+                    '3D Part Parametric Sketching & Extrusions',
+                    'Assembly Mating & Kinematic Constraints',
+                    'Mass Properties & Material Density Calculation',
+                    'Engineering Drawing Views & Blueprint Specs'
+                ]
+            },
+            'robotics_infosys': {
+                title: 'Robotics Course',
+                issuer: 'Infosys Springboard',
+                date: 'Completed',
+                id: 'INF-ROB-01',
+                category: 'Robotics & Automation',
+                description: 'Technical course covering fundamental robotics mechanics, sensor integration, actuator feedback loops, and kinematic path control.',
+                skills: [
+                    'Robotics Kinematics & Mechanics',
+                    'Sensors & Actuators Integration',
+                    'Autonomous Feedback Control Loops',
+                    'Industrial Robotics Applications'
+                ]
+            },
+            'ml_mathworks': {
+                title: 'Machine Learning Onramp',
+                issuer: 'MathWorks',
+                date: 'Completed',
+                id: 'MW-ML-ONRAMP',
+                category: 'Machine Learning',
+                description: 'Official MathWorks course covering machine learning fundamentals, feature extraction, supervised classification models, and algorithmic evaluations in MATLAB.',
+                skills: [
+                    'Supervised & Unsupervised Machine Learning',
+                    'Feature Extraction & Data Preprocessing',
+                    'Classification Model Training & Assessment',
+                    'MATLAB Computational Workflows'
+                ]
+            },
+            'emp_comm': {
+                title: 'Employment Communication – A Lab Based Course',
+                issuer: 'NPTEL',
+                date: 'Completed',
+                id: 'NPTEL-EMP-COMM',
+                category: 'Professional Soft Skills',
+                description: 'Lab-based professional course covering effective corporate communication, technical report writing, workplace presentation, and interpersonal collaboration.',
+                skills: [
+                    'Technical Report & Documentation Writing',
+                    'Workplace Communication & Presentations',
+                    'Interpersonal Team Collaboration',
+                    'Corporate Professional Etiquette'
+                ]
+            },
+            'intro_ml': {
+                title: 'Introduction to Machine Learning',
+                issuer: 'NPTEL',
+                date: 'Completed',
+                id: 'NPTEL-INTRO-ML',
+                category: 'Machine Learning',
+                description: 'In-depth academic course on core machine learning concepts, linear & logistic regression, decision trees, neural networks, and model performance metrics.',
+                skills: [
+                    'Linear & Logistic Regression Analysis',
+                    'Decision Trees & Random Forest Classifier',
+                    'Model Evaluation Metrics & Cross-Validation',
+                    'Algorithmic Problem-Solving'
+                ]
+            },
+            'fusion_bootcamp': {
+                title: 'Mastering Fusion for CAD – 2 Days Bootcamp',
+                issuer: 'Anna University & Autodesk Student',
+                date: 'Completed (2 Days Bootcamp)',
+                id: 'AU-AD-FUSION-BOOT',
+                category: 'CAD Bootcamp',
+                description: 'Hands-on intensive bootcamp exploring 3D parametric surface modeling, generative design concepts, and cloud collaboration using Autodesk Fusion 360.',
+                skills: [
+                    'Autodesk Fusion 360 Parametric Modeling',
+                    'Generative Design & Surface Sculpting',
+                    'Cloud-Based CAD Collaboration',
+                    'Rapid Prototyping Preparation'
+                ]
+            },
+            'industry_5': {
+                title: '3rd National Workshop on “Innovative Applications of Industry 5.0”',
+                issuer: 'Vellore Institute of Technology (VIT), Vellore',
+                date: 'Duration: 1 Day Workshop',
+                id: 'VIT-IND-5.0-WRK',
+                category: 'National Technical Workshop',
+                description: 'National workshop covering Industry 5.0 technologies, human-robot collaboration, AI-driven manufacturing, and smart IoT sensor ecosystems.',
+                skills: [
+                    'Industry 5.0 Smart Manufacturing Paradigms',
+                    'Human-Robot Collaboration Frameworks',
+                    'AI & IoT Integration in Industry',
+                    'Sustainable & Resilience Engineering'
+                ]
+            }
+        };
+
+        function openCertModal(key) {
+            const data = certDetails[key];
+            if (!data) return;
+
+            const modal = document.getElementById('project-modal');
+            const content = document.getElementById('modal-body-content');
+
+            content.innerHTML = `
+                <div style="margin-bottom: 1.2rem;">
+                    <span class="project-card-category-badge" style="position:static;">${data.category}</span>
+                </div>
+                <h2 style="color:#ffffff; font-size:1.7rem; margin-bottom:0.5rem; font-family:'Plus Jakarta Sans',sans-serif;">${data.title}</h2>
+                <p style="color:#60a5fa; font-size:0.95rem; font-weight:700; margin-bottom:1rem;">Issued by ${data.issuer} (${data.date}) &bull; Credential ID: ${data.id}</p>
+                <div style="background:rgba(0,117,255,0.1); border:1px solid rgba(0,117,255,0.3); border-radius:12px; padding:1.2rem; margin-bottom:1.5rem;">
+                    <p style="color:#c0c0cb; line-height:1.6; font-size:0.95rem; margin:0;">${data.description}</p>
+                </div>
+                <h4 style="color:#ffffff; font-size:1.05rem; margin-bottom:0.8rem;">Verified Skills &amp; Syllabus Coverage:</h4>
+                <ul style="color:#c0c0cb; padding-left:1.2rem; line-height:1.7;">
+                    ${data.skills.map(s => `<li style="margin-bottom:0.4rem;">${s}</li>`).join('')}
+                </ul>
+            `;
+
+            modal.classList.add('active');
+        }
+
+        function closeCertModal() {
+            document.getElementById('project-modal').classList.remove('active');
+        }
+
+        document.getElementById('project-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'project-modal') {
+                closeCertModal();
+            }
+        });
+    </script>
+</body>
+</html>

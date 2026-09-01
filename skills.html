@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Isaac Joshua A | Mechanical Engineering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=8.0">
+</head>
+<body class="projects-page">
+    <!-- Top Navigation Bar -->
+    <header class="top-navbar">
+        <div class="nav-container">
+            <a href="index.html#home" class="nav-brand">ISAAC JOSHUA A</a>
+            <nav class="nav-links">
+                <a href="index.html#home" class="nav-item">Home</a>
+                <a href="skills.html" class="nav-item active">Skills</a>
+                <a href="projects.html" class="nav-item">Projects</a>
+                <a href="education.html" class="nav-item">Education</a>
+                <a href="certifications.html" class="nav-item">Certifications</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="projects-page-wrapper">
+
+        <!-- SECTION 1: Hero Section -->
+        <section class="projects-page-hero">
+            <div class="badge">
+                <span class="status-dot green"></span>
+                <span>CORE COMPETENCIES &amp; TECHNICAL PROFICIENCY</span>
+            </div>
+            <h1 class="projects-page-title">
+                Engineering Skills &amp; <br>
+                <span class="highlight-blue">Technical Capabilities</span>
+            </h1>
+            <p class="projects-page-subtext">
+                An in-depth breakdown of my technical domain expertise, CAD/CAM design tools, programming languages, computational methods, soft skills, and languages.
+            </p>
+
+            <!-- Filter Buttons -->
+            <div class="projects-filter-bar" style="margin-top: 2rem;">
+                <button class="filter-btn active" onclick="filterSkills('all', this)">All Competencies</button>
+                <button class="filter-btn" onclick="filterSkills('cad', this)">CAD &amp; Engineering</button>
+                <button class="filter-btn" onclick="filterSkills('prog', this)">Programming &amp; ML</button>
+                <button class="filter-btn" onclick="filterSkills('soft', this)">Soft Skills</button>
+                <button class="filter-btn" onclick="filterSkills('lang', this)">Languages</button>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Detailed Skills Grid -->
+        <section class="projects-grid-section">
+            <div class="projects-grid" id="skillsGrid">
+                
+                <!-- Skill 1: SolidWorks -->
+                <div class="project-card-full skill-item" data-category="cad">
+                    <div class="project-card-body" style="padding: 2.2rem;">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <img src="assets/images/skills/skill_solidworks.jpg" alt="SolidWorks" class="skill-icon" style="width:58px; height:58px; margin-bottom:0;">
+                            <span style="color:#10b981; font-size:0.82rem; font-weight:700; background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.3); padding:0.3rem 0.8rem; border-radius:50px;">Certified</span>
+                        </div>
+                        <h3 class="project-card-title" style="font-size:1.6rem; margin-bottom:0.6rem;">SolidWorks</h3>
+                        <p class="project-card-desc" style="font-size:0.95rem; line-height:1.6; margin-bottom:1.2rem;">
+                            Advanced 3D part modeling, mechanical assembly design, motion analysis, and static stress evaluation. Used extensively for industrial hook design and roller follower simulations.
+                        </p>
+                        <div class="project-card-tags" style="margin-bottom:1.4rem;">
+                            <span class="project-tag">3D Modeling</span>
+                            <span class="project-tag">Assembly</span>
+                            <span class="project-tag">FEA Analysis</span>
+                            <span class="project-tag">Motion Simulation</span>
+                        </div>
+                        <button onclick="openSkillModal('solidworks')" class="btn-card-details" style="width:100%; justify-content:center; padding:0.8rem;">
+                            Skill Details &amp; Applications &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Skill 2: AutoCAD -->
+                <div class="project-card-full skill-item" data-category="cad">
+                    <div class="project-card-body" style="padding: 2.2rem;">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <img src="assets/images/skills/skill_autocad.jpg" alt="AutoCAD" class="skill-icon" style="width:58px; height:58px; margin-bottom:0;">
+                            <span style="color:#0075FF; font-size:0.82rem; font-weight:700; background:rgba(0,117,255,0.15); border:1px solid rgba(0,117,255,0.3); padding:0.3rem 0.8rem; border-radius:50px;">Proficient</span>
+                        </div>
+                        <h3 class="project-card-title" style="font-size:1.6rem; margin-bottom:0.6rem;">AutoCAD</h3>
+                        <p class="project-card-desc" style="font-size:0.95rem; line-height:1.6; margin-bottom:1.2rem;">
+                            2D drafting, technical orthographic projections, isometric engineering views, GD&amp;T dimensioning, and structural floor layout designs for mechanical components.
+                        </p>
+                        <div class="project-card-tags" style="margin-bottom:1.4rem;">
+                            <span class="project-tag">2D Drafting</span>
+                            <span class="project-tag">Orthographic Projections</span>
+                            <span class="project-tag">GD&amp;T</span>
+                            <span class="project-tag">Schematics</span>
+                        </div>
+                        <button onclick="openSkillModal('autocad')" class="btn-card-details" style="width:100%; justify-content:center; padding:0.8rem;">
+                            Skill Details &amp; Applications &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Skill 3: Python -->
+                <div class="project-card-full skill-item" data-category="prog">
+                    <div class="project-card-body" style="padding: 2.2rem;">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <img src="assets/images/skills/skill_python.jpg" alt="Python" class="skill-icon" style="width:58px; height:58px; margin-bottom:0;">
+                            <span style="color:#10b981; font-size:0.82rem; font-weight:700; background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.3); padding:0.3rem 0.8rem; border-radius:50px;">Proficient</span>
+                        </div>
+                        <h3 class="project-card-title" style="font-size:1.6rem; margin-bottom:0.6rem;">Python</h3>
+                        <p class="project-card-desc" style="font-size:0.95rem; line-height:1.6; margin-bottom:1.2rem;">
+                            Core scripting language for computational engineering, Computer Vision using OpenCV, data analysis, game automation, and machine learning models.
+                        </p>
+                        <div class="project-card-tags" style="margin-bottom:1.4rem;">
+                            <span class="project-tag">OpenCV</span>
+                            <span class="project-tag">Scripting</span>
+                            <span class="project-tag">Data Processing</span>
+                            <span class="project-tag">Algorithms</span>
+                        </div>
+                        <button onclick="openSkillModal('python')" class="btn-card-details" style="width:100%; justify-content:center; padding:0.8rem;">
+                            Skill Details &amp; Applications &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Skill 4: Machine Learning -->
+                <div class="project-card-full skill-item" data-category="prog">
+                    <div class="project-card-body" style="padding: 2.2rem;">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <img src="assets/images/skills/skill_ml.jpg" alt="Machine Learning" class="skill-icon" style="width:58px; height:58px; margin-bottom:0;">
+                            <span style="color:#10b981; font-size:0.82rem; font-weight:700; background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.3); padding:0.3rem 0.8rem; border-radius:50px;">Certified</span>
+                        </div>
+                        <h3 class="project-card-title" style="font-size:1.6rem; margin-bottom:0.6rem;">Machine Learning</h3>
+                        <p class="project-card-desc" style="font-size:0.95rem; line-height:1.6; margin-bottom:1.2rem;">
+                            Supervised learning, classification algorithms, feature extraction, and computer vision integration. Credentialed via MathWorks &amp; NPTEL Machine Learning courses.
+                        </p>
+                        <div class="project-card-tags" style="margin-bottom:1.4rem;">
+                            <span class="project-tag">Supervised Learning</span>
+                            <span class="project-tag">Computer Vision</span>
+                            <span class="project-tag">Model Training</span>
+                            <span class="project-tag">MathWorks</span>
+                        </div>
+                        <button onclick="openSkillModal('ml')" class="btn-card-details" style="width:100%; justify-content:center; padding:0.8rem;">
+                            Skill Details &amp; Applications &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Skill 5: SQL & MySQL -->
+                <div class="project-card-full skill-item" data-category="prog">
+                    <div class="project-card-body" style="padding: 2.2rem;">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <div style="display:flex; gap:0.5rem;">
+                                <img src="assets/images/skills/skill_sql.jpg" alt="SQL" class="skill-icon" style="width:58px; height:58px; margin-bottom:0;">
+                                <img src="assets/images/skills/skill_mysql.jpg" alt="MySQL" class="skill-icon" style="width:58px; height:58px; margin-bottom:0;">
+                            </div>
+                            <span style="color:#0075FF; font-size:0.82rem; font-weight:700; background:rgba(0,117,255,0.15); border:1px solid rgba(0,117,255,0.3); padding:0.3rem 0.8rem; border-radius:50px;">Intermediate</span>
+                        </div>
+                        <h3 class="project-card-title" style="font-size:1.6rem; margin-bottom:0.6rem;">SQL &amp; MySQL</h3>
+                        <p class="project-card-desc" style="font-size:0.95rem; line-height:1.6; margin-bottom:1.2rem;">
+                            Relational database modeling, complex query writing, schema normalization, joins, indexing, and data management for engineering and analytical data.
+                        </p>
+                        <div class="project-card-tags" style="margin-bottom:1.4rem;">
+                            <span class="project-tag">Relational DB</span>
+                            <span class="project-tag">Query Optimization</span>
+                            <span class="project-tag">MySQL Server</span>
+                            <span class="project-tag">Data Schema</span>
+                        </div>
+                        <button onclick="openSkillModal('sql')" class="btn-card-details" style="width:100%; justify-content:center; padding:0.8rem;">
+                            Skill Details &amp; Applications &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Skill 6: MATLAB -->
+                <div class="project-card-full skill-item" data-category="cad">
+                    <div class="project-card-body" style="padding: 2.2rem;">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <img src="assets/images/skills/skill_matlab.jpg" alt="MATLAB" class="skill-icon" style="width:58px; height:58px; margin-bottom:0;">
+                            <span style="color:#0075FF; font-size:0.82rem; font-weight:700; background:rgba(0,117,255,0.15); border:1px solid rgba(0,117,255,0.3); padding:0.3rem 0.8rem; border-radius:50px;">Intermediate</span>
+                        </div>
+                        <h3 class="project-card-title" style="font-size:1.6rem; margin-bottom:0.6rem;">MATLAB</h3>
+                        <p class="project-card-desc" style="font-size:0.95rem; line-height:1.6; margin-bottom:1.2rem;">
+                            Mathematical modeling, matrix computations, thermal &amp; kinematic simulations, numerical plotting, and algorithmic problem-solving for engineering analysis.
+                        </p>
+                        <div class="project-card-tags" style="margin-bottom:1.4rem;">
+                            <span class="project-tag">Matrix Operations</span>
+                            <span class="project-tag">Numerical Analysis</span>
+                            <span class="project-tag">Data Plotting</span>
+                            <span class="project-tag">Simulations</span>
+                        </div>
+                        <button onclick="openSkillModal('matlab')" class="btn-card-details" style="width:100%; justify-content:center; padding:0.8rem;">
+                            Skill Details &amp; Applications &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Skill 7: C Programming -->
+                <div class="project-card-full skill-item" data-category="prog">
+                    <div class="project-card-body" style="padding: 2.2rem;">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <img src="assets/images/skills/skill_cprog.jpg" alt="C Programming" class="skill-icon" style="width:58px; height:58px; margin-bottom:0;">
+                            <span style="color:#0075FF; font-size:0.82rem; font-weight:700; background:rgba(0,117,255,0.15); border:1px solid rgba(0,117,255,0.3); padding:0.3rem 0.8rem; border-radius:50px;">Intermediate</span>
+                        </div>
+                        <h3 class="project-card-title" style="font-size:1.6rem; margin-bottom:0.6rem;">C Programming</h3>
+                        <p class="project-card-desc" style="font-size:0.95rem; line-height:1.6; margin-bottom:1.2rem;">
+                            Low-level programming logic, pointers, memory allocation, structured programming fundamentals, and embedded systems logic for hardware interfacing.
+                        </p>
+                        <div class="project-card-tags" style="margin-bottom:1.4rem;">
+                            <span class="project-tag">Pointers</span>
+                            <span class="project-tag">Memory Management</span>
+                            <span class="project-tag">Embedded Logic</span>
+                            <span class="project-tag">Data Structures</span>
+                        </div>
+                        <button onclick="openSkillModal('cprog')" class="btn-card-details" style="width:100%; justify-content:center; padding:0.8rem;">
+                            Skill Details &amp; Applications &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Skill 8: Soft Skills -->
+                <div class="project-card-full skill-item" data-category="soft">
+                    <div class="project-card-body" style="padding: 2.2rem;">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <span class="project-card-category-badge" style="position:static; background:rgba(0,117,255,0.18); border:1px solid rgba(0,117,255,0.4); color:#60a5fa;">Professional Attributes</span>
+                            <span style="color:#10b981; font-size:0.82rem; font-weight:700; background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.3); padding:0.3rem 0.8rem; border-radius:50px;">Core Competency</span>
+                        </div>
+                        <h3 class="project-card-title" style="font-size:1.6rem; margin-bottom:0.6rem;">Soft Skills &amp; Work Ethic</h3>
+                        <p class="project-card-desc" style="font-size:0.95rem; line-height:1.6; margin-bottom:1.2rem;">
+                            Teamwork, Time Management, Active Volunteering, Effective Technical Communication, and Critical Problem Solving demonstrated in industrial and academic setups.
+                        </p>
+                        <div class="project-card-tags" style="margin-bottom:1.4rem;">
+                            <span class="project-tag">Teamwork</span>
+                            <span class="project-tag">Time Management</span>
+                            <span class="project-tag">Communication</span>
+                            <span class="project-tag">Volunteering</span>
+                        </div>
+                        <button onclick="openSkillModal('softskills')" class="btn-card-details" style="width:100%; justify-content:center; padding:0.8rem;">
+                            Skill Details &amp; Applications &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Skill 9: Languages -->
+                <div class="project-card-full skill-item" data-category="lang">
+                    <div class="project-card-body" style="padding: 2.2rem;">
+                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+                            <span class="project-card-category-badge" style="position:static; background:rgba(0,117,255,0.18); border:1px solid rgba(0,117,255,0.4); color:#60a5fa;">Communication</span>
+                            <span style="color:#10b981; font-size:0.82rem; font-weight:700; background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.3); padding:0.3rem 0.8rem; border-radius:50px;">Multilingual</span>
+                        </div>
+                        <h3 class="project-card-title" style="font-size:1.6rem; margin-bottom:0.6rem;">Language Proficiency</h3>
+                        <p class="project-card-desc" style="font-size:0.95rem; line-height:1.6; margin-bottom:1.2rem;">
+                            Fluent in technical &amp; professional English (spoken and written). Basic conversational proficiency in Hindi for cross-regional collaboration.
+                        </p>
+                        <div class="project-card-tags" style="margin-bottom:1.4rem;">
+                            <span class="project-tag">English (Fluent)</span>
+                            <span class="project-tag">Hindi (Basic)</span>
+                            <span class="project-tag">Technical Writing</span>
+                        </div>
+                        <button onclick="openSkillModal('languages')" class="btn-card-details" style="width:100%; justify-content:center; padding:0.8rem;">
+                            Skill Details &amp; Applications &rarr;
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Detailed Skill Breakdown -->
+    <div id="skillModal" class="project-modal" onclick="closeSkillModal(event)">
+        <div class="project-modal-content" onclick="event.stopPropagation()" style="max-width: 750px;">
+            <button class="modal-close-btn" onclick="closeSkillModal(event)">&times;</button>
+            <div id="modalSkillBody">
+                <!-- Dynamic Content Injected Here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const skillDetails = {
+            'solidworks': {
+                title: 'SolidWorks (3D CAD & FEA Analysis)',
+                badge: 'CAD & 3D Design',
+                level: 'Certified / Advanced',
+                img: 'assets/images/skills/skill_solidworks.jpg',
+                desc: 'SolidWorks is my primary tool for mechanical component modeling, assembly visualization, stress concentration study, and mechanism animation.',
+                points: [
+                    'Created detailed 3D CAD models for Crane Hook design and static stress concentration evaluation.',
+                    'Modeled custom CAM and Roller Follower mechanisms with kinematic displacement tracking.',
+                    'Performed static structural analysis (FEA) to verify yield strength and safety factors under heavy mechanical load.',
+                    'Certified SolidWorks Associate credential earned via Dassault Systèmes.'
+                ],
+                tools: ['3D Part Design', 'Assembly Mates', 'Motion Study', 'FEA Static Stress', 'GD&T Drawings']
+            },
+            'autocad': {
+                title: 'AutoCAD (2D Drafting & Schematics)',
+                badge: 'Engineering Drawing',
+                level: 'Proficient',
+                img: 'assets/images/skills/skill_autocad.jpg',
+                desc: 'AutoCAD is used for creating precise 2D mechanical orthographic projections, section views, dimensions, and engineering schematics.',
+                points: [
+                    'Drafted multi-view orthographic and isometric engineering drawings according to ISO/BIS standards.',
+                    'Applied Geometric Dimensioning and Tolerancing (GD&T) for manufacturing readiness.',
+                    'Created component layout schematics and technical assembly blueprints.'
+                ],
+                tools: ['2D Drafting', 'Orthographic Projection', 'Section Views', 'Dimensioning', 'Layers & Blocks']
+            },
+            'python': {
+                title: 'Python (Scripting, Computer Vision & Data)',
+                badge: 'Programming & Data',
+                level: 'Proficient',
+                img: 'assets/images/skills/skill_python.jpg',
+                desc: 'Python is my core programming language used across Computer Vision applications, algorithm development, and engineering data analysis.',
+                points: [
+                    'Developed a Computer Vision project using Python and OpenCV for image processing.',
+                    'Built a Python-based interactive Number-Guessing Game utilizing custom game loops.',
+                    'Implemented numerical scripts for data processing and automated workflow execution.'
+                ],
+                tools: ['Python 3.x', 'OpenCV', 'NumPy', 'Data Analysis', 'Logic Automation']
+            },
+            'ml': {
+                title: 'Machine Learning & AI',
+                badge: 'AI & Data Science',
+                level: 'Certified',
+                img: 'assets/images/skills/skill_ml.jpg',
+                desc: 'Applied machine learning concepts focusing on model training, feature extraction, supervised classification, and data-driven engineering insights.',
+                points: [
+                    'Completed MathWorks Machine Learning Onramp certification.',
+                    'Completed NPTEL Introduction to Machine Learning course.',
+                    'Explored predictive model building and feature engineering techniques.'
+                ],
+                tools: ['Supervised Learning', 'Classification', 'Regression', 'Feature Engineering', 'MathWorks']
+            },
+            'sql': {
+                title: 'SQL & MySQL (Database Management)',
+                badge: 'Databases',
+                level: 'Intermediate',
+                img: 'assets/images/skills/skill_sql.jpg',
+                desc: 'Relational database design and query writing for structured data storage, retrieval, and management.',
+                points: [
+                    'Structured relational database schemas with primary/foreign key constraints.',
+                    'Wrote optimized SQL queries using aggregate functions, subqueries, and table JOINs.',
+                    'Managed database tables in MySQL Workbench environment.'
+                ],
+                tools: ['MySQL Server', 'Relational Schema', 'SELECT & JOINs', 'Data Integrity', 'DDL / DML']
+            },
+            'matlab': {
+                title: 'MATLAB (Numerical Computing)',
+                badge: 'Numerical Computing',
+                level: 'Intermediate',
+                img: 'assets/images/skills/skill_matlab.jpg',
+                desc: 'MATLAB is utilized for matrix computations, numerical analysis, vector calculations, and engineering graphing.',
+                points: [
+                    'Calculated thermal fluid and mechanical system equations using vectorized scripts.',
+                    'Generated 2D and 3D data visualization plots for experimental results.',
+                    'Utilized mathematical functions for system simulation.'
+                ],
+                tools: ['Matrix Computations', 'Vectorization', 'Plotting & Graphics', 'Numerical Solvers']
+            },
+            'cprog': {
+                title: 'C Programming',
+                badge: 'Core Programming',
+                level: 'Intermediate',
+                img: 'assets/images/skills/skill_cprog.jpg',
+                desc: 'Fundamental low-level programming for understanding computer architecture, algorithm efficiency, and memory management.',
+                points: [
+                    'Implemented data structures and algorithm logic using structured C code.',
+                    'Worked with pointers, memory allocation, and array operations.',
+                    'Built foundational understanding for embedded microcontrollers.'
+                ],
+                tools: ['Pointers', 'Memory Allocation', 'Control Structures', 'Functions & Arrays']
+            },
+            'softskills': {
+                title: 'Soft Skills & Work Ethic',
+                badge: 'Professional Attributes',
+                level: 'Core Competency',
+                desc: 'Strong interpersonal and organizational capabilities honed through team projects, volunteering, and industrial exposure.',
+                points: [
+                    'Teamwork: Collaborated with multidisciplinary student teams on IoT and mechanical design projects.',
+                    'Time Management: Consistently met deadlines while balancing coursework, certifications, and hands-on projects.',
+                    'Active Volunteering: Engaged in institutional activities, technical workshops, and community events.',
+                    'Effective Communication: Credentialed through NPTEL Employment Communication course; articulate in technical reports and presentations.',
+                    'Critical Thinking: Analytical approach to debugging, root-cause failure evaluation, and design trade-offs.'
+                ],
+                tools: ['Teamwork', 'Time Management', 'Volunteering', 'Communication', 'Critical Thinking']
+            },
+            'languages': {
+                title: 'Language Proficiency',
+                badge: 'Communication',
+                level: 'Multilingual',
+                desc: 'Effective communication in international and regional engineering environments.',
+                points: [
+                    'English: Full professional fluency in reading, writing, technical documentation, and oral presentations.',
+                    'Hindi: Basic conversational capability for working with diverse teams across regions.'
+                ],
+                tools: ['English (Fluent)', 'Hindi (Basic)', 'Technical Presentation', 'Report Writing']
+            }
+        };
+
+        function filterSkills(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const items = document.querySelectorAll('.skill-item');
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function openSkillModal(skillKey) {
+            const data = skillDetails[skillKey];
+            if (!data) return;
+
+            let pointsHtml = data.points.map(p => `<li style="margin-bottom:0.6rem; color:#e0e0eb; font-size:0.95rem; line-height:1.6;">${p}</li>`).join('');
+            let toolsHtml = data.tools.map(t => `<span class="project-tag" style="background:rgba(0,117,255,0.15); border:1px solid rgba(0,117,255,0.3); color:#ffffff;">${t}</span>`).join('');
+            let imgHeaderHtml = data.img ? `<img src="${data.img}" alt="${data.title}" style="width:72px; height:72px; border-radius:16px; box-shadow:0 8px 20px rgba(0,0,0,0.5); object-fit:cover; border:2px solid #0075FF;">` : '';
+
+            const modalBody = document.getElementById('modalSkillBody');
+            modalBody.innerHTML = `
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.2rem;">
+                    <div style="display:flex; align-items:center; gap:1.2rem;">
+                        ${imgHeaderHtml}
+                        <div>
+                            <span class="project-card-category-badge" style="position:static; background:rgba(0,117,255,0.2); border:1px solid #0075FF; color:#60a5fa;">${data.badge}</span>
+                            <h2 style="color:#ffffff; font-size:1.6rem; font-weight:800; font-family:'Manrope', sans-serif; margin:0.4rem 0 0 0;">${data.title}</h2>
+                        </div>
+                    </div>
+                    <span style="color:#10b981; font-size:0.85rem; font-weight:700; background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.3); padding:0.4rem 0.9rem; border-radius:50px;">${data.level}</span>
+                </div>
+                <p style="color:#a0a0ab; font-size:1rem; line-height:1.65; margin-bottom:1.5rem;">${data.desc}</p>
+                
+                <h4 style="color:#ffffff; font-size:1.1rem; font-weight:700; margin-bottom:0.8rem; font-family:'Manrope', sans-serif;">Key Highlights &amp; Applications:</h4>
+                <ul style="padding-left:1.2rem; margin-bottom:1.8rem;">
+                    ${pointsHtml}
+                </ul>
+
+                <h4 style="color:#ffffff; font-size:1.1rem; font-weight:700; margin-bottom:0.8rem; font-family:'Manrope', sans-serif;">Tools &amp; Sub-domains:</h4>
+                <div style="display:flex; flex-wrap:wrap; gap:0.6rem;">
+                    ${toolsHtml}
+                </div>
+            `;
+
+            const modal = document.getElementById('skillModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSkillModal(event) {
+            const modal = document.getElementById('skillModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>

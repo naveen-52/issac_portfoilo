@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaac Joshua A - Mechanical Engineering Student</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=5.0">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <header class="top-navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">ISAAC JOSHUA A</a>
+            <nav class="nav-links">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="skills.html" class="nav-item">Skills</a>
+                <a href="projects.html" class="nav-item">Projects</a>
+                <a href="education.html" class="nav-item">Education</a>
+                <a href="certifications.html" class="nav-item">Certifications</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Background Smooth Scroll Canvas -->
+    <canvas id="scroll-canvas"></canvas>
+
+    <!-- Page Content Scroll Container -->
+    <main class="page-container">
+        <!-- Home / Hero Section -->
+        <section id="home" class="section hero-section">
+            <div class="hero-wrapper">
+                <div class="hero-top">
+                    <div class="hero-left">
+                        <div class="badge">
+                            <span class="status-dot green"></span>
+                            <span>OPEN TO OPPORTUNITIES</span>
+                        </div>
+                        <h1 class="hero-title">
+                            ISAAC<br>
+                            <span class="highlight-blue">JOSHUA A</span>
+                        </h1>
+                        <div class="hero-subtitle">MECHANICAL ENGINEERING STUDENT</div>
+                        <div class="subtitle-line"></div>
+                        <p class="hero-description">
+                            Exploring engineering, IoT, robotics and emerging technologies to build innovative solutions for a better tomorrow.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="projects.html" class="btn-primary">
+                                <span>View Projects</span>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                            <a href="#about" class="btn-secondary">
+                                <span>Resume</span>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <polyline points="19 12 12 19 5 12"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-bottom">
+                    <h2 class="hero-big-name">Portfolio</h2>
+                </div>
+            </div>
+        <!-- Skills & Projects Section (Matching Reference Image) -->
+        <section id="skills" class="section skills-projects-section">
+            <div class="skills-projects-container">
+                <!-- Skills Sub-Block -->
+                <!-- Radial Orbit Skills Layout -->
+                <div class="skills-orbit-wrapper">
+                    <!-- Central Focal Point Hub -->
+                    <div class="skills-orbit-center">
+                        <div class="orbit-pulse-ring"></div>
+                        <div class="orbit-pulse-ring-outer"></div>
+                        <span class="orange-badge" style="font-size:0.75rem; letter-spacing:0.12em; margin-bottom:0.4rem;">CORE SYSTEM</span>
+                        <h2 class="skills-orbit-heading">TECHNICAL<br>SKILLS</h2>
+                        <p style="color:#a0a0ab; font-size:0.82rem; margin-top:0.3rem; font-family:'Manrope', sans-serif;">Engineering &amp; Tools</p>
+                    </div>
+
+                    <!-- SVG Orbit Connector Rays & Rings -->
+                    <svg class="orbit-svg-canvas" viewBox="0 0 800 650" preserveAspectRatio="xMidYMid meet">
+                        <!-- Concentric Orbital Rings -->
+                        <circle cx="400" cy="325" r="160" class="orbit-ring-line" />
+                        <circle cx="400" cy="325" r="260" class="orbit-ring-line-outer" />
+                        <!-- 8 Radial Connecting Lines to Skill Nodes -->
+                        <line x1="400" y1="325" x2="400" y2="65" class="orbit-ray-line" data-node="1" />
+                        <line x1="400" y1="325" x2="585" y2="140" class="orbit-ray-line" data-node="2" />
+                        <line x1="400" y1="325" x2="660" y2="325" class="orbit-ray-line" data-node="3" />
+                        <line x1="400" y1="325" x2="585" y2="510" class="orbit-ray-line" data-node="4" />
+                        <line x1="400" y1="325" x2="400" y2="585" class="orbit-ray-line" data-node="5" />
+                        <line x1="400" y1="325" x2="215" y2="510" class="orbit-ray-line" data-node="6" />
+                        <line x1="400" y1="325" x2="140" y2="325" class="orbit-ray-line" data-node="7" />
+                        <line x1="400" y1="325" x2="215" y2="140" class="orbit-ray-line" data-node="8" />
+                    </svg>
+
+                    <!-- 8 Orbital Skill Cards -->
+                    <div class="skills-orbit-nodes">
+                        <!-- Node 1: Top Center (Python) -->
+                        <div class="skill-card orbit-card orbit-pos-1" data-node="1">
+                            <img src="assets/images/skills/skill_python.jpg" alt="Python" class="skill-icon">
+                            <h4 class="skill-name">Python</h4>
+                        </div>
+                        <!-- Node 2: Top Right (SQL) -->
+                        <div class="skill-card orbit-card orbit-pos-2" data-node="2">
+                            <img src="assets/images/skills/skill_sql.jpg" alt="SQL" class="skill-icon">
+                            <h4 class="skill-name">SQL</h4>
+                        </div>
+                        <!-- Node 3: Middle Right (MySQL) -->
+                        <div class="skill-card orbit-card orbit-pos-3" data-node="3">
+                            <img src="assets/images/skills/skill_mysql.jpg" alt="MySQL" class="skill-icon">
+                            <h4 class="skill-name">MySQL</h4>
+                        </div>
+                        <!-- Node 4: Bottom Right (Machine Learning) -->
+                        <div class="skill-card orbit-card orbit-pos-4" data-node="4">
+                            <img src="assets/images/skills/skill_ml.jpg" alt="Machine Learning" class="skill-icon">
+                            <h4 class="skill-name">Machine Learning</h4>
+                        </div>
+                        <!-- Node 5: Bottom Center (SolidWorks) -->
+                        <div class="skill-card orbit-card orbit-pos-5" data-node="5">
+                            <img src="assets/images/skills/skill_solidworks.jpg" alt="SolidWorks" class="skill-icon">
+                            <h4 class="skill-name">SolidWorks</h4>
+                        </div>
+                        <!-- Node 6: Bottom Left (AutoCAD) -->
+                        <div class="skill-card orbit-card orbit-pos-6" data-node="6">
+                            <img src="assets/images/skills/skill_autocad.jpg" alt="AutoCAD" class="skill-icon">
+                            <h4 class="skill-name">AutoCAD</h4>
+                        </div>
+                        <!-- Node 7: Middle Left (MATLAB) -->
+                        <div class="skill-card orbit-card orbit-pos-7" data-node="7">
+                            <img src="assets/images/skills/skill_matlab.jpg" alt="MATLAB" class="skill-icon">
+                            <h4 class="skill-name">MATLAB</h4>
+                        </div>
+                        <!-- Node 8: Top Left (C Programming) -->
+                        <div class="skill-card orbit-card orbit-pos-8" data-node="8">
+                            <img src="assets/images/skills/skill_cprog.jpg" alt="C Programming" class="skill-icon">
+                            <h4 class="skill-name">C Programming</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills & Languages Sub-Block -->
+                <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; width: 100%;">
+                    <div style="background: rgba(0, 117, 255, 0.06); border: 1px solid rgba(0, 117, 255, 0.2); border-radius: 14px; padding: 1.5rem;">
+                        <h3 style="color: #ffffff; font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; font-family: 'Manrope', sans-serif;">Soft Skills</h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
+                            <span class="project-tag" style="font-size: 0.9rem; padding: 0.4rem 0.9rem;">Teamwork</span>
+                            <span class="project-tag" style="font-size: 0.9rem; padding: 0.4rem 0.9rem;">Time Management</span>
+                            <span class="project-tag" style="font-size: 0.9rem; padding: 0.4rem 0.9rem;">Active Volunteering</span>
+                            <span class="project-tag" style="font-size: 0.9rem; padding: 0.4rem 0.9rem;">Effective Communication</span>
+                            <span class="project-tag" style="font-size: 0.9rem; padding: 0.4rem 0.9rem;">Critical Thinking</span>
+                        </div>
+                    </div>
+
+                    <div style="background: rgba(0, 117, 255, 0.06); border: 1px solid rgba(0, 117, 255, 0.2); border-radius: 14px; padding: 1.5rem;">
+                        <h3 style="color: #ffffff; font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; font-family: 'Manrope', sans-serif;">Languages</h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.6rem; color: #c0c0cb; font-size: 0.95rem;">
+                            <div><strong style="color: #ffffff;">English:</strong> Fluent</div>
+                            <div><strong style="color: #ffffff;">Hindi:</strong> Basic</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Sub-Block -->
+                <div id="projects" class="projects-wrapper">
+                    <div class="projects-header">
+                        <h2 class="orange-projects-title">My Projects</h2>
+                    </div>
+
+                    <div class="featured-project-container">
+                        <!-- Featured Project 1: Solar Tracking System -->
+                        <div class="featured-project-card">
+                            <div class="featured-project-img-col">
+                                <img src="assets/images/projects/project_solar_tracking.png?v=2.0" alt="IoT Based Solar Panel Tracking System" class="featured-project-img">
+                            </div>
+                            <div class="featured-project-info-col">
+                                <span class="featured-project-category">IoT / Engineering</span>
+                                <h3 class="featured-project-title">IoT Based Solar Panel Tracking System</h3>
+                                <p class="featured-project-desc">
+                                    This project helps me to understand the real-life applications of IoT and the workflow of sensors and actuators.
+                                </p>
+                                <a href="projects.html" class="featured-project-link">
+                                    <span>View Details</span> &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Featured Project 2: Crane Hook Design & Analysis -->
+                        <div class="featured-project-card">
+                            <div class="featured-project-img-col">
+                                <img src="assets/images/projects/project_crane_hook.png?v=2.0" alt="Crane Hook Design and Analysis" class="featured-project-img">
+                            </div>
+                            <div class="featured-project-info-col">
+                                <span class="featured-project-category">SolidWorks / CAD</span>
+                                <h3 class="featured-project-title">Crane Hook Design and Analysis</h3>
+                                <p class="featured-project-desc">
+                                    Parametric 3D CAD modeling and finite element analysis (FEA) of an industrial crane hook under heavy load conditions.
+                                </p>
+                                <a href="projects.html" class="featured-project-link">
+                                    <span>View Details</span> &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Featured Project 3: Computer Vision Project -->
+                        <div class="featured-project-card">
+                            <div class="featured-project-img-col">
+                                <img src="assets/images/projects/project_computer_vision.png?v=2.0" alt="Computer Vision Project" class="featured-project-img">
+                            </div>
+                            <div class="featured-project-info-col">
+                                <span class="featured-project-category">Python / CV</span>
+                                <h3 class="featured-project-title">Computer Vision Project</h3>
+                                <p class="featured-project-desc">
+                                    Real-time image processing, feature recognition, and object tracking application built using Python and OpenCV.
+                                </p>
+                                <a href="projects.html" class="featured-project-link">
+                                    <span>View Details</span> &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 3.5rem; text-align: center;">
+                        <a href="projects.html" class="btn-primary">
+                            <span>Explore All Projects</span>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section about-section">
+            <div class="about-card">
+                <div class="about-right-col">
+                    <h2 class="about-big-title">About<br>me.</h2>
+                    <h3 class="about-greeting">Meet <strong>ISAAC JOSHUA A</strong>,</h3>
+                    <p class="about-tagline">
+                        Mechanical Engineering Student
+                    </p>
+                    
+                    <p class="about-paragraph">
+                        Motivated Mechanical Engineering student with a strong interest in <strong>design, manufacturing, thermal engineering, and computational engineering</strong>. Gained practical industrial exposure through internship training at <strong>DCW Limited, Sahupuram</strong>, developing an understanding of industrial processes and professional work culture.
+                    </p>
+                    <p class="about-paragraph">
+                        Passionate about applying engineering concepts to practical problems through projects and innovative solutions, with strong <strong>analytical and problem-solving abilities</strong>.
+                    </p>
+
+                    <div class="about-signature-wrapper">
+                        <span class="signature-text">Isaac</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
