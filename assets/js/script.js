@@ -222,9 +222,49 @@ function setupSkillsAnimation() {
     });
 }
 
+// Mobile Hamburger Navigation Toggle Logic
+function toggleMobileMenu() {
+    const btn = document.querySelector('.mobile-menu-btn');
+    const links = document.querySelector('.nav-links');
+    if (btn && links) {
+        btn.classList.toggle('active');
+        links.classList.toggle('active');
+    }
+}
+
+function setupMobileNav() {
+    const btn = document.querySelector('.mobile-menu-btn');
+    const links = document.querySelector('.nav-links');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    if (btn) {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+    }
+
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (btn && links) {
+                btn.classList.remove('active');
+                links.classList.remove('active');
+            }
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (links && links.classList.contains('active') && !links.contains(e.target) && !btn.contains(e.target)) {
+            btn.classList.remove('active');
+            links.classList.remove('active');
+        }
+    });
+}
+
 function initApp() {
     setupNavSmoothScroll();
     setupSkillsAnimation();
+    setupMobileNav();
 }
 
 if (document.readyState === 'loading') {

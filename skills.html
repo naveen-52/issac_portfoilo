@@ -13,9 +13,24 @@
     <!-- Top Navigation Bar -->
     <header class="top-navbar">
         <div class="nav-container">
-            <a href="index.html#home" class="nav-brand">ISAAC JOSHUA A</a>
+            <div class="nav-brand-group">
+                <a href="index.html#home" class="btn-back-home">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Back to Home</span>
+                </a>
+                <a href="index.html#home" class="nav-brand">ISAAC JOSHUA A</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
             <nav class="nav-links">
                 <a href="index.html#home" class="nav-item">Home</a>
+                <a href="index.html#about" class="nav-item">About</a>
                 <a href="skills.html" class="nav-item active">Skills</a>
                 <a href="projects.html" class="nav-item">Projects</a>
                 <a href="education.html" class="nav-item">Education</a>
@@ -458,5 +473,6 @@
             document.body.style.overflow = 'auto';
         }
     </script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
