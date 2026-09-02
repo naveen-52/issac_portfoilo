@@ -420,19 +420,20 @@
 
             let pointsHtml = data.points.map(p => `<li style="margin-bottom:0.6rem; color:#e0e0eb; font-size:0.95rem; line-height:1.6;">${p}</li>`).join('');
             let toolsHtml = data.tools.map(t => `<span class="project-tag" style="background:rgba(0,117,255,0.15); border:1px solid rgba(0,117,255,0.3); color:#ffffff;">${t}</span>`).join('');
-            let imgHeaderHtml = data.img ? `<img src="${data.img}" alt="${data.title}" style="width:72px; height:72px; border-radius:16px; box-shadow:0 8px 20px rgba(0,0,0,0.5); object-fit:cover; border:2px solid #0075FF;">` : '';
+            let imgHeaderHtml = data.img ? `<div class="skill-modal-icon-container"><img src="${data.img}" alt="${data.title}" class="skill-modal-icon"></div>` : '';
+            let statusBadgeHtml = data.level ? `<span class="skill-modal-status-badge">${data.level}</span>` : '';
 
             const modalBody = document.getElementById('modalSkillBody');
             modalBody.innerHTML = `
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.2rem;">
-                    <div style="display:flex; align-items:center; gap:1.2rem;">
-                        ${imgHeaderHtml}
-                        <div>
-                            <span class="project-card-category-badge" style="position:static; background:rgba(0,117,255,0.2); border:1px solid #0075FF; color:#60a5fa;">${data.badge}</span>
-                            <h2 style="color:#ffffff; font-size:1.6rem; font-weight:800; font-family:'Manrope', sans-serif; margin:0.4rem 0 0 0;">${data.title}</h2>
+                <div class="skill-modal-header">
+                    ${imgHeaderHtml}
+                    <div class="skill-modal-text-container">
+                        <div class="skill-modal-badges">
+                            <span class="skill-modal-category-badge">${data.badge}</span>
+                            ${statusBadgeHtml}
                         </div>
+                        <h2 class="skill-modal-title">${data.title}</h2>
                     </div>
-                    <span style="color:#10b981; font-size:0.85rem; font-weight:700; background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.3); padding:0.4rem 0.9rem; border-radius:50px;">${data.level}</span>
                 </div>
                 <p style="color:#a0a0ab; font-size:1rem; line-height:1.65; margin-bottom:1.5rem;">${data.desc}</p>
                 

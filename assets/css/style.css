@@ -2111,3 +2111,107 @@ body.projects-page {
         font-size: 0.84rem !important;
     }
 }
+
+/* ==========================================================================
+   SKILL DETAIL MODAL HEADER - RESPONSIVE ALIGNMENT FIX
+   ========================================================================== */
+.skill-modal-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-bottom: 1.4rem;
+    padding-right: 2.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.skill-modal-icon-container {
+    flex-shrink: 0;
+}
+
+.skill-modal-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    border: 2px solid #0075FF;
+}
+
+.skill-modal-text-container {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+}
+
+.skill-modal-badges {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.skill-modal-category-badge {
+    position: static !important;
+    background: rgba(0, 117, 255, 0.2) !important;
+    border: 1px solid #0075FF !important;
+    color: #60a5fa !important;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.skill-modal-status-badge {
+    color: #10b981;
+    font-size: 0.82rem;
+    font-weight: 700;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.skill-modal-title {
+    color: #ffffff;
+    font-size: 1.55rem;
+    font-weight: 800;
+    font-family: 'Manrope', sans-serif;
+    margin: 0.2rem 0 0 0;
+    line-height: 1.28;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 767px) {
+    .skill-modal-header {
+        gap: 0.9rem;
+        margin-bottom: 1.2rem;
+        padding-right: 2rem;
+    }
+
+    .skill-modal-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+    }
+
+    .skill-modal-title {
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+
+    .skill-modal-category-badge,
+    .skill-modal-status-badge {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.65rem;
+    }
+}
